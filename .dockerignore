@@ -1,0 +1,5 @@
+*
+!.git
+!.gitmodules
+!main.go
+!vendor

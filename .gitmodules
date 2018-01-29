@@ -1,0 +1,42 @@
+[submodule "vendor/github.com/prometheus/client_golang"]
+	path = vendor/github.com/prometheus/client_golang
+	url = https://github.com/prometheus/client_golang
+[submodule "vendor/github.com/beorn7/perks"]
+	path = vendor/github.com/beorn7/perks
+	url = https://github.com/beorn7/perks
+[submodule "vendor/github.com/golang/protobuf"]
+	path = vendor/github.com/golang/protobuf
+	url = https://github.com/golang/protobuf
+[submodule "vendor/github.com/prometheus/client_model"]
+	path = vendor/github.com/prometheus/client_model
+	url = https://github.com/prometheus/client_model
+[submodule "vendor/github.com/prometheus/common"]
+	path = vendor/github.com/prometheus/common
+	url = https://github.com/prometheus/common
+[submodule "vendor/github.com/matttproud/golang_protobuf_extensions"]
+	path = vendor/github.com/matttproud/golang_protobuf_extensions
+	url = https://github.com/matttproud/golang_protobuf_extensions
+[submodule "vendor/github.com/prometheus/procfs"]
+	path = vendor/github.com/prometheus/procfs
+	url = https://github.com/prometheus/procfs
+[submodule "vendor/github.com/btcsuite/btcd"]
+	path = vendor/github.com/btcsuite/btcd
+	url = https://github.com/btcsuite/btcd
+[submodule "vendor/github.com/btcsuite/btclog"]
+	path = vendor/github.com/btcsuite/btclog
+	url = https://github.com/btcsuite/btclog
+[submodule "vendor/github.com/btcsuite/btcutil"]
+	path = vendor/github.com/btcsuite/btcutil
+	url = https://github.com/btcsuite/btcutil
+[submodule "vendor/golang.org/x/crypto"]
+	path = vendor/golang.org/x/crypto
+	url = https://go.googlesource.com/crypto
+[submodule "vendor/github.com/btcsuite/go-socks"]
+	path = vendor/github.com/btcsuite/go-socks
+	url = https://github.com/btcsuite/go-socks
+[submodule "vendor/github.com/btcsuite/websocket"]
+	path = vendor/github.com/btcsuite/websocket
+	url = https://github.com/btcsuite/websocket
+[submodule "vendor/github.com/spf13/pflag"]
+	path = vendor/github.com/spf13/pflag
+	url = https://github.com/spf13/pflag
