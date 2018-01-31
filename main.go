@@ -15,20 +15,25 @@ import (
 const namespace = "bitcoind"
 
 func main() {
-	log.Println("bitcoind-exporter starting...")
-	defer log.Println("bitcoind-exporter stopping...")
-
 	config := rpcclient.ConnConfig{
 		HTTPPostMode: true, // Bitcoin core only supports HTTP POST mode
 		DisableTLS:   true, // Bitcoin core does not provide TLS by default
 	}
 
-	flagset := pflag.NewFlagSet("bitcoind-exporter", pflag.PanicOnError)
-	flagset.StringVarP(&config.Host,"bitcoind-host", "h", "127.0.0.1:9332", "")
-	flagset.StringVarP(&config.User,"bitcoind-user", "u", "bitcoind", "")
-	flagset.StringVarP(&config.Pass,"bitcoind-password", "p", "password", "")
-	listenTo := flagset.StringP("listen-to", "l", "0.0.0.0:8452", "")
-	flagset.Parse(os.Args[1:])
+	pflag.StringVarP(&config.Host,"bitcoind-host", "h", "127.0.0.1:9332", "")
+	pflag.StringVarP(&config.User,"bitcoind-user", "u", "bitcoind", "bitcoind's RPC user")
+	pflag.StringVarP(&config.Pass,"bitcoind-password", "p", "password", "bitcoind's RPC password")
+	listenTo := pflag.StringP("listen-to", "l", "0.0.0.0:8452", "the network address and port the exporter will expose its metrics on")
+
+	if (os.Args[1] == "help") {
+		pflag.Usage()
+		return
+	}
+
+	pflag.Parse()
+
+	log.Println("bitcoind-exporter starting...")
+	defer log.Println("bitcoind-exporter stopping...")
 
 	client, err := rpcclient.New(&config, nil)
 	if err != nil {
