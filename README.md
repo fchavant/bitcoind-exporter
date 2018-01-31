@@ -1,6 +1,6 @@
 # bitcoind-exporter
 
-A [Prometheus](https://prometheus.io/) metrics exporter for bitcoind
+A [Prometheus](https://prometheus.io/) metrics exporter for [bitcoind](https://github.com/bitcoin/bitcoin)
 
 ## Usage
 
