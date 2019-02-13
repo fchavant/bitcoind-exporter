@@ -22,7 +22,6 @@ func main() {
 
 	pflag.StringVarP(&config.Host,"bitcoind-host", "h", "127.0.0.1:9332", "")
 	pflag.StringVarP(&config.User,"bitcoind-user", "u", "bitcoind", "bitcoind's RPC user")
-	pflag.StringVarP(&config.Pass,"bitcoind-password", "p", "password", "bitcoind's RPC password")
 	listenTo := pflag.StringP("listen-to", "l", "0.0.0.0:8452", "the network address and port the exporter will expose its metrics on")
 
 	if (os.Args[1] == "help") {
@@ -31,6 +30,7 @@ func main() {
 	}
 
 	pflag.Parse()
+	config.Pass = os.Getenv("RPC_PASS")
 
 	log.Println("bitcoind-exporter starting...")
 	defer log.Println("bitcoind-exporter stopping...")
