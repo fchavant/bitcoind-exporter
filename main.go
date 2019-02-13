@@ -41,7 +41,7 @@ func main() {
 	}
 
 	log.Printf("trying to connect to bitcoind at %q...\n", config.Host)
-	_, err = client.GetInfo()
+	_, err = client.GetBlockCount()
 	if err != nil {
 		panic(err)
 	}
